@@ -31,6 +31,15 @@
 
   <title>Disciplinex</title>
   <link rel="manifest" href="manifest.json">
+
+  <script type="text/javascript">
+    if (sessionStorage.redirect) {
+      var redirect = sessionStorage.redirect;
+      sessionStorage.removeItem("redirect");
+      history.replaceState(null, null, redirect);
+    }
+  </script>
+  
 </head>
 <body>
   <script src="flutter_bootstrap.js" async></script>
